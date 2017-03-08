@@ -1,6 +1,6 @@
 {
   "name": "twitch-api-v5",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Module for Twitch's v5 API",
   "main": "index.js",
   "scripts": {

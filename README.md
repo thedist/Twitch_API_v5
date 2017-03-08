@@ -35,9 +35,9 @@ npm install twitch-api-v5 --save
 ``` js
 var api = require('twitch-api-v5');
 
-api.clientId = 'Twitch app client-id';
+api.clientID = 'Twitch app client-id';
 
-app.user.getByID({ userID: '12826' }, (err, res) => {
+api.user.getByID({ userID: '12826' }, (err, res) => {
     if(err) {
         console.log(err);
     } else {
