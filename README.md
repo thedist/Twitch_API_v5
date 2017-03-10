@@ -11,6 +11,7 @@ This module also includes undocumented endpoints (such as the chatters endpoint 
 - [Channels](#channels)
 - [Chat](#chat)
 - [Clips](#clips)
+- [Collections](#collections)
 - [Communities](#communities)
 - [Games](#games)
 - [Ingests](#ingests)
@@ -137,6 +138,24 @@ Note: The authorization code needed for getAccessToken is obtained by steps 1 an
 | api.clips.getClip | none | channelName, slug |
 | api.clips.top | none | none |
 | api.clips.followed | user\_read | none |
+
+---
+
+## Collections
+[Twitch Doc](https://dev.twitch.tv/docs/v5/reference/collections/)
+
+| Function | Auth Scope | Required Parameters |
+| -------- | ---------- | ------------------- |
+| api.collections.getMetadata | none | collectionID |
+| api.collections.getCollection | none | collectionID |
+| api.collections.getByChannel | none | channelID |
+| api.collections.create | collections\_edit | auth, channelID, title |
+| api.collections.update | collections\_edit | auth, collectionID, title |
+| api.collections.createThumbnail | collections\_edit | auth, collectionID, itemID |
+| api.collections.delete | collections\_edit | auth, collectionID |
+| api.collections.addItem | collections\_edit | auth, collectionID, videoID |
+| api.collections.delItem | collections\_edit | auth, collectionID, itemID |
+| api.collections.moveItem | collections\_edit | auth, collectionID, itemID, position |
 
 ---
 

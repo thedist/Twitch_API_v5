@@ -7,6 +7,7 @@ exports.feed = require('./lib/channelFeed');
 exports.channels = require('./lib/channels');
 exports.chat = require('./lib/chat');
 exports.clips = require('./lib/clips');
+exports.collections = require('./lib/collections');
 exports.communities = require('./lib/communities');
 exports.games = require('./lib/games');
 exports.ingests = require('./lib/ingests');
