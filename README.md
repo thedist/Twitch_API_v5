@@ -6,6 +6,7 @@ This module also includes undocumented endpoints (such as the chatters endpoint 
 ## Contents
 
 - [Getting Started](#getting-started)
+- [Authentication](#authentication)
 - [Feed](#feed)
 - [Channels](#channels)
 - [Chat](#chat)
@@ -58,6 +59,20 @@ api.feed.createPost({ auth: 'OAuth ...', channelID: '12826', post: 'New Post!' }
     ...
 });
 ```
+
+To enable debugging of the HTTP requests, use `api.debug = true;`
+
+---
+
+## Authentication
+[Twitch Doc](https://dev.twitch.tv/docs/v5/guides/authentication/)
+
+Note: The authorization code needed for getAccessToken is obtained by steps 1 and 2 of the Authorization Code Flow described in the Twitch Docs.
+
+| Function | Auth Scope | Required Parameters |
+| -------- | ---------- | ------------------- |
+| api.auth.getAccessToken | none | clientSecret, redirectURI, code |
+| api.auth.checkToken | any | auth |
 
 ---
 
@@ -268,7 +283,6 @@ api.search.({  }, (err, res) => {
 
 | Function | Auth Scope | Required Parameters | Description |
 | -------- | ---------- | ------------------- | ----------- |
-| api.other.checkToken | any | auth | Checks the validity, username, client-id and scopes of a token |
 | api.other.chatters | none | channelName | Usernames of people in chat in the specified channel |
 | api.other.hosts | none | channelID | Channels that are hosting the specified channelID |
 | api.other.hosting | none | channelID | Who the specified channelID is hosting |
