@@ -98,8 +98,8 @@ api.feed.createPost({ auth: 'OAuth ...', channelID: '12826', post: 'New Post!' }
 | api.channels.startAd | channel\_commercial | auth, channelID, duration |
 | api.channels.resetStreamKey | channel\_stream | auth, channelID |
 | api.channels.getCommunity | none | channelID |
-| api.channels.setCommunity | any | auth, channelID, communityID |
-| api.channels.leaveCommunity | any | auth, channelID |
+| api.channels.setCommunity | channel\_editor | auth, channelID, communityID |
+| api.channels.leaveCommunity | channel\_editor | auth, channelID |
 
 ---
 
@@ -132,24 +132,23 @@ api.feed.createPost({ auth: 'OAuth ...', channelID: '12826', post: 'New Post!' }
 | -------- | ---------- | ------------------- |
 | api.communities.getByName | none | name |
 | api.communities.getByID | none | communityID |
-| api.communities.create | any | auth, name, summary, description, rules |
-| api.communities.update | any (community owner) | auth, communityID |
+| api.communities.update | communities\_edit | auth, communityID |
 | api.communities.top | none | none |
-| api.communities.bans | any (community owner or moderator) | auth, communityID |
-| api.communities.addBan | any (community owner or moderator) | auth, communityID, userID |
-| api.communities.unBan | any (community owner or moderator) | auth, communityID, userID |
-| api.communities.createAvatar | any (community owner) | auth, communityID, avatar\_image |
-| api.communities.deleteAvatar | any (community owner) | auth, communityID |
-| api.communities.createCover | any (community owner) | auth, communityID, cover\_image |
-| api.communities.deleteCover | any (community owner) | auth, communityID |
-| api.communities.mods | none | communityID |
-| api.communities.addMods | any (community owner) | auth, communityID, userID |
-| api.communities.delMod | any (community owner) | auth, communityID, userID |
+| api.communities.bans | communities_moderate | auth, communityID |
+| api.communities.addBan | communities\_moderate | auth, communityID, userID |
+| api.communities.unBan | communities\_moderate | auth, communityID, userID |
+| api.communities.createAvatar | communities\_edit | auth, communityID, avatar\_image |
+| api.communities.deleteAvatar | communities\_edit | auth, communityID |
+| api.communities.createCover | communities\_edit | auth, communityID, cover\_image |
+| api.communities.deleteCover | communities\_edit | auth, communityID |
+| api.communities.mods | communities\_edit | auth, communityID |
+| api.communities.addMods | communities\_edit | auth, communityID, userID |
+| api.communities.delMod | communities\_edit | auth, communityID, userID |
 | api.communities.getPermissions | any | auth, communityID |
 | api.communities.report | none | channelID, communityID |
-| api.communities.timeouts | any (community owner or moderator) | auth, communityID |
-| api.communities.addTimeout | any (Owner or mod) | auth, communityID, userID, duration |
-| api.communities.delTimeout | any (Owner or mod) | auth, communityID, userID |
+| api.communities.timeouts | communities\_moderate | auth, communityID |
+| api.communities.addTimeout | communities\_moderate | auth, communityID, userID, duration |
+| api.communities.delTimeout | communities\_moderate | auth, communityID, userID |
 
 ---
 
@@ -269,10 +268,11 @@ api.search.({  }, (err, res) => {
 
 | Function | Auth Scope | Required Parameters | Description |
 | -------- | ---------- | ------------------- | ----------- |
+| api.other.checkToken | any | auth | Checks the validity, username, client-id and scopes of a token |
 | api.other.chatters | none | channelName | Usernames of people in chat in the specified channel |
 | api.other.hosts | none | channelID | Channels that are hosting the specified channelID |
 | api.other.hosting | none | channelID | Who the specified channelID is hosting |
-| api.other.subsTo | user\_subscriptions | channelName | Who a user is subbed to |
+| api.other.subsTo | user\_subscriptions | auth, channelName | Who a user is subbed to |
 | api.other.randomStream | none | none | Random stream |
 | api.other.getUser | none | channelName | Provides user data not returned in the documented endpoint |
 | api.other.chatProperties | none | channelName | Chat properties, such as subs only, rules etc... |
