@@ -7,6 +7,7 @@ This module also includes undocumented endpoints (such as the chatters endpoint 
 
 - [Getting Started](#getting-started)
 - [Authentication](#authentication)
+- [Bits](#bits)
 - [Feed](#feed)
 - [Channels](#channels)
 - [Chat](#chat)
@@ -74,6 +75,15 @@ Note: The authorization code needed for getAccessToken is obtained by steps 1 an
 | -------- | ---------- | ------------------- |
 | api.auth.getAccessToken | none | clientSecret, redirectURI, code |
 | api.auth.checkToken | any | auth |
+
+---
+
+## Bits
+[Twitch Doc](https://dev.twitch.tv/docs/v5/reference/bits/)
+
+| Function | Auth Scope | Required Parameters |
+| -------- | ---------- | ------------------- |
+| api.bits.cheermotes | none | none |
 
 ---
 

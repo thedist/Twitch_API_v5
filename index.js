@@ -3,6 +3,7 @@
 exports.clientID = '';
 exports.debug = false;
 exports.auth = require('./lib/authentication');
+exports.bits = require('./lib/bits');
 exports.feed = require('./lib/channelFeed');
 exports.channels = require('./lib/channels');
 exports.chat = require('./lib/chat');
