@@ -208,13 +208,6 @@ Note: The authorization code needed for getAccessToken is obtained by steps 1 an
 ## Ingests
 [Twitch Doc](https://dev.twitch.tv/docs/v5/reference/ingests/)
 
-#### Example
-``` js
-api.ingests.({  }, (err, res) => {
-    ...
-});
-```
-
 | Function | Auth Scope | Required Parameters |
 | -------- | ---------- | ------------------- |
 | api.ingests.serverList | none | none |
@@ -223,13 +216,6 @@ api.ingests.({  }, (err, res) => {
 
 ## Search
 [Twitch Doc](https://dev.twitch.tv/docs/v5/reference/search/)
-
-#### Example
-``` js
-api.search.({  }, (err, res) => {
-    ...
-});
-```
 
 | Function | Auth Scope | Required Parameters |
 | -------- | ---------- | ------------------- |
