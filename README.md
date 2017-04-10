@@ -145,9 +145,9 @@ Note: The authorization code needed for getAccessToken is obtained by steps 1 an
 
 | Function | Auth Scope | Required Parameters |
 | -------- | ---------- | ------------------- |
-| api.clips.getClip | none | channelName, slug |
+| api.clips.getClip | none | slug |
 | api.clips.top | none | none |
-| api.clips.followed | user\_read | none |
+| api.clips.followed | user\_read | auth |
 
 ---
 
@@ -186,7 +186,7 @@ Note: The authorization code needed for getAccessToken is obtained by steps 1 an
 | api.communities.createCover | communities\_edit | auth, communityID, cover\_image |
 | api.communities.deleteCover | communities\_edit | auth, communityID |
 | api.communities.mods | communities\_edit | auth, communityID |
-| api.communities.addMods | communities\_edit | auth, communityID, userID |
+| api.communities.addMod | communities\_edit | auth, communityID, userID |
 | api.communities.delMod | communities\_edit | auth, communityID, userID |
 | api.communities.getPermissions | any | auth, communityID |
 | api.communities.report | none | channelID, communityID |
@@ -279,17 +279,12 @@ Note: The authorization code needed for getAccessToken is obtained by steps 1 an
 | api.video.getVideo | none | videoID |
 | api.video.top | none | none |
 | api.video.followed | none | none |
+| api.video.create | channel_editor | auth, channelID, title |
+| api.video.upload | none | content-length, videoData, videoID, part, token |
+| api.video.complete | none | videoID, token |
+| api.video.update | channel_editor | auth, videoID |
+| api.video.delete | channel_editor | auth, videoID |
 
----
-
-## Video Upload
-[Twitch Doc](https://dev.twitch.tv/docs/v5/guides/video-upload/)
-
-| Function | Auth Scope | Required Parameters |
-| -------- | ---------- | ------------------- |
-| api.videoUpload.create | channel\_editor | auth, channelName, title |
-| api.videoUpload.upload | none | videoID, part, uploadToken, videoData, contentLength |
-| api.videoUpload.complete | none | videoID, uploadToken |
 
 ---
 

@@ -17,5 +17,4 @@ exports.streams = require('./lib/streams');
 exports.teams = require('./lib/teams');
 exports.users = require('./lib/users');
 exports.videos = require('./lib/videos');
-exports.videoUpload = require('./lib/videoUpload');
 exports.other = require('./lib/other');
