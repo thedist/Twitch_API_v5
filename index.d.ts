@@ -257,7 +257,7 @@ interface chatInterface {
     }, callback: callbackFunc): void
 
     /** Gets all chat emoticons (including their images). Caution: This endpoint returns a large amount of data. */
-    emotes(data?: {}, callback: callbackFunc): void
+    emotes(data: {}, callback: callbackFunc): void
 }
 
 interface clipsInterface {
@@ -273,6 +273,7 @@ interface clipsInterface {
         channel?: string
         cursor?: string
         game?: string
+        language?: string
         limit?: number
         period?: "day" | "week" | "month" | "all"
         trending?: boolean
@@ -503,7 +504,7 @@ interface gamesInterface {
 interface ingestsInterface {
     
     /** Gets a list of Twitch ingest servers. */
-    serverList(data?: {}, callback: callbackFunc): void
+    serverList(data: {}, callback: callbackFunc): void
 }
 
 interface searchInterface {
@@ -778,7 +779,7 @@ interface otherInterface {
     }, callback: callbackFunc): void
     
     /** Get random stream */
-    randomStream(data?: {}, callback: callbackFunc): void
+    randomStream(data: {}, callback: callbackFunc): void
 
     /** Provides user data not returned in the documented endpoint */
     getUser(data: {
@@ -835,7 +836,7 @@ interface otherInterface {
     }, callback: callbackFunc): void
 
     /** Get global chat badges */
-    badges(data?: {}, callback: callbackFunc): void
+    badges(data: {}, callback: callbackFunc): void
 
     /** Get sub chat badges */
     subBadges(data: {
@@ -848,8 +849,8 @@ interface otherInterface {
     }, callback: callbackFunc): void
 
     /** Get streams data with extra counter-strike information */
-    cs(data?: {}, callback: callbackFunc): void
+    cs(data: {}, callback: callbackFunc): void
 
     /** Get data about cs maps being played on streams */
-    csMaps(data?: {}, callback: callbackFunc): void
+    csMaps(data: {}, callback: callbackFunc): void
 }

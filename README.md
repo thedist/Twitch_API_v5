@@ -1,5 +1,5 @@
 # Twitch_API_v5
-Simple module to use Twitch's API v5 for all endpoints (with the exception of clips and video upload which are only available using v4). For details on optional parameters or required authentication scopes please follow the links to the Twitch docs.
+Simple module to use Twitch's API v5 for all endpoints. For details on optional parameters or required authentication scopes please follow the links to the Twitch docs.
 
 This module also includes undocumented endpoints (such as the chatters endpoint to view which users are currently in a channels chat), these should be used at your own risk and are should be expected to change or be removed at any time.
 
