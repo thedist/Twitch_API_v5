@@ -276,14 +276,14 @@ Note: The authorization code needed for getAccessToken is obtained by steps 1 an
 
 | Function | Auth Scope | Required Parameters |
 | -------- | ---------- | ------------------- |
-| api.video.getVideo | none | videoID |
-| api.video.top | none | none |
-| api.video.followed | none | none |
-| api.video.create | channel_editor | auth, channelID, title |
-| api.video.upload | none | content-length, videoData, videoID, part, token |
-| api.video.complete | none | videoID, token |
-| api.video.update | channel_editor | auth, videoID |
-| api.video.delete | channel_editor | auth, videoID |
+| api.videos.getVideo | none | videoID |
+| api.videos.top | none | none |
+| api.videos.followed | none | none |
+| api.videos.create | channel_editor | auth, channelID, title |
+| api.videos.upload | none | content-length, videoData, videoID, part, token |
+| api.videos.complete | none | videoID, token |
+| api.videos.update | channel_editor | auth, videoID |
+| api.videos.delete | channel_editor | auth, videoID |
 
 
 ---
