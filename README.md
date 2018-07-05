@@ -75,6 +75,7 @@ Note: The authorization code needed for getAccessToken is obtained by steps 1 an
 | -------- | ---------- | ------------------- |
 | api.auth.getAccessToken | none | clientSecret, redirectURI, code |
 | api.auth.checkToken | any | auth |
+| api.auth.refreshToken | none | clientSecret, refreshToken |
 
 ---
 
