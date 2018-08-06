@@ -40,7 +40,7 @@ var api = require('twitch-api-v5');
 
 api.clientID = 'Twitch app client-id';
 
-api.user.getByID({ userID: '12826' }, (err, res) => {
+api.users.userByID({ userID: '12826' }, (err, res) => {
     if(err) {
         console.log(err);
     } else {
