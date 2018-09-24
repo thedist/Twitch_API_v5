@@ -279,7 +279,7 @@ Note: The authorization code needed for getAccessToken is obtained by steps 1 an
 | -------- | ---------- | ------------------- |
 | api.videos.getVideo | none | videoID |
 | api.videos.top | none | none |
-| api.videos.followed | none | none |
+| api.videos.followed | user\_read | auth |
 | api.videos.create | channel_editor | auth, channelID, title |
 | api.videos.upload | none | content-length, videoData, videoID, part, token |
 | api.videos.complete | none | videoID, token |
