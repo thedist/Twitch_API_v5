@@ -597,7 +597,7 @@ interface usersInterface {
 
     /** Gets multiple users from an array of usernames */
     usersByName(data: {
-        users: string
+        users: string || string[]
     }, callback: callbackFunc): void
 
     /** Gets a list of the emojis and emoticons that the specified user can use in chat. These are both the globally available ones and the channel-specific ones (which can be accessed by any user subscribed to the channel). */
