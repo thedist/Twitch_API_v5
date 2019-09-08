@@ -3,6 +3,9 @@ Simple module to use Twitch's API v5 for all endpoints. For details on optional 
 
 This module also includes undocumented endpoints (such as the chatters endpoint to view which users are currently in a channels chat), these should be used at your own risk and are should be expected to change or be removed at any time.
 
+Important Note:
+With the removal of v3, and v5 being deprecated and removed at some point in the future, I urge all users to migrate to the Helix API as soon as possible!
+
 ## Contents
 
 - [Getting Started](#getting-started)

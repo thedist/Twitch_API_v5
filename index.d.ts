@@ -258,6 +258,12 @@ interface chatInterface {
 
     /** Gets all chat emoticons (including their images). Caution: This endpoint returns a large amount of data. */
     emotes(data: {}, callback: callbackFunc): void
+
+    /** Gets a list of chat rooms determined by if the auth token is a channel mod, sub, or normal user */
+    rooms(data: {
+      auth: string
+      channelID: string
+    }, callback: callbackFunc): void
 }
 
 interface clipsInterface {
